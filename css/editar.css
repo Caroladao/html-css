@@ -1,0 +1,48 @@
+.img-avatar{
+    width: 20%;
+    border-radius: 0px;
+    margin: 1%;
+    float: left;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+#avatar{
+    margin: 3% 1% 1% 1%;
+    display: none;
+}
+#fname,#lname{
+    width: 58%;
+    display: inline;
+}
+.inputs{
+    outline: none;
+    border:none;
+    box-shadow: 1px 1px 4px rgba(0,0,0,.5);
+}
+.btn-editar{
+    margin:8% 0 1% 1%; /*quando clilcar no botão, margin mudar parar 2% 0 1% 1%*/
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background: #f5f5f5;
+    font-size: 12pt;
+    display: block;
+}
+@media only screen and (max-width: 715px) {
+    .pesquisar{
+        display: none;
+    }
+    .img-editar{
+        height: 20px;
+        width: 100%;
+        background: red;
+    }
+    .img-avatar{
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        margin: 0 -1% 1% -2%;
+    }
+    #fname,#lname{
+        width: 90%;
+    }
+}

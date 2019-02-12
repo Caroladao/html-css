@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+    <title>Agenda de Contatos</title>
+</head>
+<body>
+    <header>                               
+        <nav class="nav-menu">
+            <ul>
+                <a href=""><li><img class="nav-img" src="img/pessoa.png" alt="Meus Dados">Meus Dados</li></a>
+                <a href="index.html"><li><img class="nav-img" src="img/ctt.png" alt="Contatos" >Contatos</li></a>
+                <a href=""><li><img class="nav-img" src="img/favorito.png" alt="Favoritos">Favoritos</li></a>
+                <a href="inserir.html"><li><img class="nav-img" src="img/more.png" alt="Inserir">Inserir</li></a>
+                <a href=""><li><img class="nav-img" src="img/sobre.png" alt="Sobre">Sobre</li></a>
+                <a href=""><li><img class="nav-img" src="img/lua.png" alt="Modo Noturno">Modo Noturno</li></a>
+                <a href=""><li><img class="nav-img" src="img/off.png" alt="Sair">Sair</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="superior">
+        <nav class="nav-bar">
+            <img id="img-header1" src="img/menu.png" alt="Menu">
+            <img id="img-header2" src="img/contatos.png" alt="Contatos"> <span>Contatos</span>
+        </nav>
+        <div class="pesquisar">
+            <form>
+                <button class="btn-lupa" type="submit"></button>
+                <input type="text" id="busca" placeholder="Pesquisar..."/>
+            </form>
+        </div>
+    </div>
+    <main class="container">
+        <section class="contatos">
+            <div class="box" id="boxx">
+                <img class="img-avatar" src="img/avatar.jpg" alt="Avatar">
+                <img id="img-favorito" src="img/favorito.png" alt="Favorito">
+                <h3>Nome do Ser</h3>
+                <p>Email: exemplo@email.com <br>
+                    Numero: (12)345678912 <br>
+                </p>
+                <a href="editar.html"><img class="img-editar" src="img/editar.png" alt="Editar"></a>
+            </div>
+
+            <div class="exibircontato" id="exibir-ctt">
+                <img class="img-avatar" src="img/avatar.jpg" alt="Avatar">
+                <img class="img-favorito2" src="img/favorito.png" alt="Favorito">
+                <a href="editar.html"><img class="img-editar" src="img/editar.png" alt="Editar"></a>
+                <img class="img-sair" id="img-sair" src="img/sair.png" alt="Fechar">
+                <h3>Nome do Ser</h3>
+                <p>Email: exemplo@email.com <br>
+                    Numero: (12)345678912
+                </p>
+                <p>Sexo: Feminino <br>
+                    Empresa: Forlogic <br>
+                    Endereço: Rua qualquer ai, nr 123 - Cornélio - PR <br>
+                    Comentarios: Uma mulher muito legal!
+
+                </p>
+            </div>
+            <button class="btn-mais">Exibir mais</button>
+        </section>
+    </main> 
+    <script>
+        // pega as info
+        var ctt = document.getElementById('exibir-ctt');
+
+        // Pega o box que abre as info
+        var box = document.getElementById("boxx");
+
+        // Pega o btn ou imagem que fecha as info
+        var sair = document.getElementById("img-sair");
+
+        // Quando clicar, abre as informações
+        box.onclick = function() {
+            ctt.style.display = "block";
+        }
+
+        // Quando clicar para fechar, ele fecha
+        sair.onclick = function() {
+            ctt.style.display = "none";
+        }
+
+        // Se clicar fora ele fecha as info
+        window.onclick = function(event) {
+            if (event.target == box) {
+                ctt.style.display = "none";
+            }
+        }
+</script>
+</body>
+</html>
