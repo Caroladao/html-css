@@ -65,13 +65,17 @@
         var btn = document.getElementById("btn-foto");
 
         // Quando clicar, abre as informações
-        btn.onclick = function() {
-            inp.style.display = "block";
+        if(inp.style.display == "none"){
+            btn.onclick = function() {
+                inp.style.display = "block";
+            }
         }
 
         // Quando clicar para fechar, ele fecha
-        btn.onclick = function() {
-            inp.style.display = "none";
+        if(inp.style.display == "block"){
+            btn.onclick = function() {
+                inp.style.display = "none";
+            }
         }
 </script>
 </body>
