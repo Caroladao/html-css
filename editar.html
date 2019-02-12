@@ -43,7 +43,7 @@
                 <input class="inputs" type="text" name="fname" id="fname" maxlength="20" placeholder="Primeiro Nome" value="João" required>
                 <input class="inputs" type="text" name="lname" id="lname" maxlength="30" placeholder="Sobrenome" value="Da Silva">
                 <input class="inputs" type="file" id="avatar" src="" alt="avatar">
-                <button class="btn-editar">Editar Foto</button>
+                <button class="btn-editar" id="btn-foto">Editar Foto</button>
                 <input class="inputs" type="email" name="email" id="email" placeholder="Email: exemplo@exemplo.com" value="joaodasilva@email.com">
                 <input class="inpcheck" type="radio" name="gender" id="gender" value="f">Female
                 <input type="radio" name="gender" id="gender" value="m" checked>Male
@@ -57,9 +57,22 @@
             </form>
         </section>
     </main>
-<!--     
-    <footer>
-        <div id="pagi">1 2 3 ></div>
-    </footer> -->
+    <script>
+        // pega as input
+        var inp = document.getElementById('avatar');
+
+        // Pega o btn que abre o input
+        var btn = document.getElementById("btn-foto");
+
+        // Quando clicar, abre as informações
+        btn.onclick = function() {
+            inp.style.display = "block";
+        }
+
+        // Quando clicar para fechar, ele fecha
+        btn.onclick = function() {
+            inp.style.display = "none";
+        }
+</script>
 </body>
 </html>
