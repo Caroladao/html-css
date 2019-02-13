@@ -63,3 +63,4 @@ function inputFoto(){
             inputIsOpen = true;
     }
 }
+
