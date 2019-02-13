@@ -24,6 +24,7 @@ body{
     width: 20%;
     height: 100%;
     box-shadow: 1px 1px 1px #000;
+    display: block;
 }
 #img-header1{
     margin: 2%;
@@ -183,7 +184,7 @@ body{
     right: 10%;
 }
 .img-avatar{
-    margin: 0 3%;
+    margin: 1% 3%;
     height: 40%;
     float: left;
     border-radius: 50%;
@@ -304,7 +305,8 @@ form{
         background: #ccc;
     }
     .box .img-avatar{
-        height: 50px;
+        height: 90%;
+        margin: 1%;
     }
     .box #img-favorito{
         width: auto;
@@ -319,20 +321,34 @@ form{
     .box p{
         display: none; 
     }
-
     .exibircontato{
-        margin: 0 auto;
+        margin: 0 6%;
+        width: 80%;
+        box-shadow: 1px 1px 10px rgba(0,0,0,.5);
     }
-    .exibircontato .img-avatar{
+    .exibircontato p{
+        margin: 0 0 10% 0;
+    }
+    .img-avatar{
         margin: 1%;
     }
-    .exibircontato .img-favorito2{
+    .img-favorito2{
         width: 10%;
         height: auto;
     }
     .btn-mais{
         display: block;
         width: 93%;
+        bottom: 2%;
+    }
+    .img-editar{
+        right: 60%;
+        width: 40px;
+        bottom: 2%;
+    }
+    .img-sair{
+        right: 30%;
+        width: 40px;
         bottom: 2%;
     }
     
@@ -411,8 +427,4 @@ form{
         margin: 2%;
     }
 
-    /* --- EDITAR --- */
-    .exibircontato{
-        display: none;
-    }
 }

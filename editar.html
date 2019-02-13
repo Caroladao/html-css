@@ -12,21 +12,21 @@
 </head>
 <body>
     <header>                               
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="nav-menu">
             <ul>
                 <a href=""><li><img class="nav-img" src="img/pessoa.png" alt="Meus Dados">Meus Dados</li></a>
                 <a href="index.html"><li><img class="nav-img" src="img/ctt.png" alt="Contatos" >Contatos</li></a>
                 <a href=""><li><img class="nav-img" src="img/favorito.png" alt="Favoritos">Favoritos</li></a>
                 <a href="inserir.html"><li><img class="nav-img" src="img/more.png" alt="Inserir">Inserir</li></a>
                 <a href=""><li><img class="nav-img" src="img/sobre.png" alt="Sobre">Sobre</li></a>
-                <a href=""><li><img class="nav-img" src="img/lua.png" alt="Modo Noturno">Modo Noturno</li></a>
+                <!-- <a href=""><li><img class="nav-img" src="img/lua.png" alt="Modo Noturno">Modo Noturno</li></a> -->
                 <a href=""><li><img class="nav-img" src="img/off.png" alt="Sair">Sair</li></a>
             </ul>
         </nav>
     </header>
     <div class="superior">
         <nav class="nav-bar">
-            <img id="img-header1" src="img/menu.png" alt="Menu">
+            <img id="img-header1" class="icon-menu" src="img/menu.png" alt="Menu" onclick="abreMenu()">
             <img id="img-header2" src="img/contatos.png" alt="Contatos"> <span>Contatos</span>
         </nav>
         <div class="pesquisar">
@@ -38,12 +38,12 @@
     </div>
     <main class="container">
         <section class="editar">
-            <form action="editar.html" method="post">
+            <form method="POST" action="editar.html">
                 <img class="img-avatar" src="img/avatar2.png" alt="Avatar">
                 <input class="inputs" type="text" name="fname" id="fname" maxlength="20" placeholder="Primeiro Nome" value="João" required>
                 <input class="inputs" type="text" name="lname" id="lname" maxlength="30" placeholder="Sobrenome" value="Da Silva">
                 <input class="inputs" type="file" id="avatar" src="" alt="avatar">
-                <button class="btn-editar" id="btn-foto">Editar Foto</button>
+                <button class="btn-editar" id="btn-foto" type="button" onclick="inputFoto()">Editar Foto</button>
                 <input class="inputs" type="email" name="email" id="email" placeholder="Email: exemplo@exemplo.com" value="joaodasilva@email.com">
                 <input class="inpcheck" type="radio" name="gender" id="gender" value="f">Female
                 <input type="radio" name="gender" id="gender" value="m" checked>Male
@@ -57,26 +57,5 @@
             </form>
         </section>
     </main>
-    <script>
-        // pega as input
-        var inp = document.getElementById('avatar');
-
-        // Pega o btn que abre o input
-        var btn = document.getElementById("btn-foto");
-
-        // Quando clicar, abre as informações
-        if(inp.style.display == "none"){
-            btn.onclick = function() {
-                inp.style.display = "block";
-            }
-        }
-
-        // Quando clicar para fechar, ele fecha
-        if(inp.style.display == "block"){
-            btn.onclick = function() {
-                inp.style.display = "none";
-            }
-        }
-</script>
 </body>
 </html>
